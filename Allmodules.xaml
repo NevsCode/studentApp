@@ -1,0 +1,91 @@
+﻿<Window x:Class="ProgpartTwo.Allmodules"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgpartTwo"
+        mc:Ignorable="d"
+        Title="Modules Application" Height="800" Width="800">
+    <Border Padding="15">
+
+        <StackPanel Margin="0,0,0,0" >
+            <!--creating the start ,reset and exit button -->
+            <Grid>
+                <TextBlock FontStretch="ExtraCondensed" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="WelcomeHeading" Text="Welcome Student: "/>
+                <TextBlock FontStretch="ExtraCondensed" x:Name="TextBlockName" VerticalAlignment="Top" Margin="100,0,0,0"/>
+            </Grid>
+            <!--creating the start ,reset and exit button -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Background="AliceBlue" Margin="0,0,15,0" Grid.Column="0" Content ="Enter Modules" Click="Button_Click_1"/>
+                <Button Background="Yellow" Grid.Column="1" Content="Reset" Height="20" VerticalAlignment="Top" Click="Button_Click_2"/>
+                <Button Background="Red" Margin="15,0,0,0" Grid.Column="2" Content="Exit" Click="Button_Click"/>
+            </Grid>
+
+            <!--modules details-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="318*"/>
+                    <ColumnDefinition Width="67*"/>
+                    <ColumnDefinition Width="385*"/>
+                </Grid.ColumnDefinitions>
+                <!--modules textblocks column 0-->
+                <StackPanel Margin="50,20,0,0" Grid.Column="0" Grid.ColumnSpan="2">
+                    <TextBlock Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,5,0,0" Text="Enter module Code " x:Name="TXTBcodetxt"/>
+                    <TextBlock Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,10,0,0" Text="Enter module Name " x:Name="TXTBnametxt"/>
+                    <TextBlock Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,15,0,0" Text="Enter module Number of credits  " x:Name="TXTBcredittxt"/>
+                    <TextBlock Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,20,0,0" Text="Enter module class hours per week " x:Name="TXTBhours"/>
+                </StackPanel>
+                <!--modules textbox column 1-->
+                <StackPanel Margin="50,20,0,0" Grid.Column="2" >
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,5,0,0"  x:Name="TBxmodule_Codetxtb"/>
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,10,0,0" x:Name="TBxmodule_Nametxtb"/>
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,15,0,0" x:Name="TBxmodule_Creditstxtb"/>
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,20,0,0" x:Name="TBxmodule_Hourstxtb"/>
+
+                </StackPanel>
+
+            </Grid>
+
+
+            <!--semester textblock or text-->
+            <TextBlock  Visibility="Hidden" Padding="5" Margin="350,30,0,0" FontWeight="Bold" FontStyle="Oblique" Text="SEMESTER" x:Name="TXTBsemstertxt"/>
+
+            <!--semester details-->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--semester textblocks column 0-->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,10,0,0" Text="Enter the number of weeks in the semester" x:Name="TXTBweeksIn_semester"/>
+                    <TextBlock  Visibility="Hidden" FontWeight="Bold" FontStyle="Oblique" Padding="5" Margin="0,10,0,0" Text="Enter the start date of the semester" x:Name="TXTBdate_txt"/>
+                </StackPanel>
+
+                <StackPanel Margin="50,20,0,0" Grid.Column="1" >
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,0,0,0"  x:Name="TBxweeks_Codetxtb"/>
+                    <TextBox Visibility="Hidden" Padding="5" Margin="0,5,0,0" x:Name="TBxdate_txtb"/>
+                    <Button Visibility="Hidden" Padding="5" Margin="0,10,0,0" Width="100" Background="AliceBlue" Content="Add module" x:Name="BTaddbutton" Click="addbutton_Click"/>
+                </StackPanel>
+            </Grid>
+
+            <!--semester textblock or text-->
+            <TextBlock Visibility="Hidden" Padding="5" Margin="350,30,0,0" FontWeight="Bold" FontStyle="Oblique" Text="DISPLAY" x:Name="TXTBdisplaytxt"  />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Visibility="Hidden"  Padding="5" Margin="0,0,0,0" Width="100" Background="AliceBlue" Content="DISPLAY" x:Name="BTdisplaybutton" Click="displaybutton_Click"/>
+            </Grid>
+            <Button x:Name="BTNback" Visibility="Hidden"  Width="50" Content="Back" Click="Button_Click_3"/>
+        </StackPanel>
+
+    </Border>
+
+</Window>
